@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kansalaisnoppia</title>
+  <meta name="author" content="AYY & HYY & ISYY & TREY">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <style type="text/css">
+    @font-face {
+      font-family: 'Bosk';
+      src: url('Bosk.woff2');
+    }
+    @font-face {
+      font-family: 'ViceCitySans';
+      src: url('ViceCitySans.woff2');
+    }
+    html {
+      --YELLOW: #F7C45F;
+      --YELLOW-MEDIUM: #EBD2C6;
+      --YELLOW-FAINT: #F5E8E4;
+      --BLACK: #26364A;
+      --RED: #D9505E;
+      font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1080 - 320)));
+      box-sizing: border-box;
+      height: 100vh;
+    }
+    body {
+      background-color: var(--YELLOW-FAINT);
+      color: var(--BLACK);
+      font-family: 'ViceCitySans';
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-y: auto;
+      min-height: calc(100% - 4rem);
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+      grid-column-gap: 4rem;
+      max-width: 88rem;
+      margin: auto;
+    }
+    h1 {
+      margin: 0;
+    }
+    h2 {
+      margin-top: 0;
+    }
+
+    ol {
+      list-style: none;
+      padding-left: 0;
+    }
+    ol.first {
+      counter-reset: numbering;
+    }
+    ol.second {
+      counter-reset: numbering 4;
+    }
+    ol.third {
+      counter-reset: numbering 8;
+    }
+    ol li {
+      counter-increment: numbering;
+      display: flex;
+      padding-bottom: 1rem;
+    }
+    ol li::before {
+      content: counter(numbering) ". ";
+      color: var(--YELLOW);
+      font-family: 'Bosk';
+      font-size: 2rem;
+      padding-right: 1rem;
+      min-width: 2rem;
+    }
+
+    .title {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+    }
+    .header {
+      padding-bottom: 1.5rem;
+    }
+    .number {
+      font-family: 'Bosk';
+      color: var(--YELLOW);
+    }
+    .number-title {
+      font-size: 5rem;
+      padding-right: 1rem;
+    }
+    .recommendations {
+      font-family: 'Bosk';
+      color: var(--RED);
+      text-align: right;
+      display: block;
+      padding: 0.3rem 0.5rem 0.5rem;
+    }
+    .list-title {
+      font-family: 'Bosk';
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center
+
+    }
+    .logo {
+      max-width: 8rem;
+      padding: 0 1rem;
+      width: 100%;
+    }
+    .die {
+      position: absolute;
+      width: 5rem;
+      z-index: -1;
+    }
+    .die1 {
+      top: 10%;
+      left: 7%;
+    }
+    .die2 {
+      right: 8%;
+      bottom: 15%;
+      transform: rotate(20deg);
+    }
+    .die3 {
+      top: 35%;
+      right: 45%;
+      transform: rotate(-40deg);
+    }
+    .die4 {
+      bottom: 30%;
+      left: 30%;
+      transform: rotate(30deg);
+    }
+  </style>
+  </head>
+  <body>
+    <section>
+      <main>
+        <div class="half">
+         <header class="header">
+           <h1 class="title">
+             <span class="number number-title">10</span>
+             <span>askelta yhteiskunnallisesti aktiivisten opiskelijoiden kasvattamiseen</span>
+           </h1>
+           <span class="title recommendations">Suositukset korkeakouluille</span>
+         </header>
+         <section class="why">
+           <h2 class="list-title">Miksi tunnustaa aktiivinen kansalaistoiminta osaksi opintoja?</h2>
+           <ol class="point-list first">
+             <li class="list-item">
+               Korkeakoulu on alusta, joka mahdollistaa aktiivisena opiskelijana ja kansalaisena toimimisen.
+               Oikeanlaisella kannustuksella opiskelijat voivat vaikuttaa asuin-, elin- ja opiskeluympäristöönsä
+               esimerkiksi järjestö-, opiskelijaedustaja- ja vapaaehtoistoiminnan kautta tai vaikkapa kunnanvaltuutettuna.
+             </li>
+             <li class="list-item">
+               Opiskelijoita on paljon, ja he muodostavat merkittävän osan korkeakoulun yhteiskunnallisesta
+               vuorovaikutuksesta. Kasvattamalla aktiivisia opiskelijoita myös koulutuksen vaikuttavuus yhteiskunnassa kasvaa!
+             </li>
+             <li class="list-item">
+               Korkeakoulujen kannattaa palkita opiskelijoita aktiivisesta kansalaisuudesta tunnustamalla syntyvä osaaminen
+               opintopisteiden muodossa, sillä tunnustus luo opiskelijoille kokemuksen siitä, että heidän tekemisellään
+               yhteiskunnassa ja yliopistoyhteisössä on merkitystä.
+             </li>
+             <li class="list-item">
+               Kansalaistoiminta mahdollistaa kohtaamisia ja luo yhteisöllisyyttä. Yliopiston piirissä toimivat
+               opiskelija-aktiivit integroituvat hyvin yliopistoyhteisöön, mikä tukee opiskelua ja hyvinvointia.
+               Opiskelijan verkostoituminen yliopistoyhteisön ulkopuolella taas edesauttaa työllistymistä ja
+               monipuolistaa maailmankuvaa.
+             </li>
+           </ol>
+         </section>
+        </div>
+        <div class="half">
+          <section class="how-practical">
+            <h2 class="list-title">Miten käytännössä?</h2>
+            <ol start="5" class="point-list second">
+              <li class="list-item">
+                Luodaan sivuaineen kaltainen opintokokonaisuus yhteiskunnallisen aktiivisuuden ympärille.
+                Opintokokonaisuus tutkintotodistuksessa on opiskelijalle valttikortti työnhaussa ja luo
+                uudenlaista kuvaa korkeakoulutuksen aikana syntyvästä osaamisesta!
+              </li>
+              <li class="list-item">
+                Ei opintopisteitä mistä tahansa toiminnasta: Määritellään selkeät pelisäännöt sille,
+                millaista toimintaa sisällytetään osaksi opintoja. Korkeakoulun arvot ja eettiset
+                periaatteet tukevat rajanvetoa epäselvissä tapauksissa.
+              </li>
+              <li class="list-item">
+                Koko korkeakoulun kattava, poikkitieteellinen opintokokonaisuus edistää parhaiten uudenlaisen
+                osaamisen syntymistä. Kannattaa olla ennakkoluuloton eri tieteenalojen ja yhteiskunnan sektorien
+                suhteen - uudet ideat syntyvät näiden törmäyttämisen kautta!
+              </li>
+              <li class="list-item">
+                Oppimispäiväkirjan tai portfolion avulla opinnollistetaan yhteiskunnallista aktiivisuutta
+                ja sidotaan käytännön kokemus omaan tieteenalaan.
+              </li>
+            </ol>
+          </section>
+          <section class="how-university">
+            <h2 class="list-title">Miten yliopisto voi tukea opiskelijoiden aktiivisuutta?</h2>
+            <ol start="9" class="point-list third">
+              <li class="list-item">
+                Yliopistoyhteisön piirissä opiskelijoiden aktiivista osallistumista yliopiston toimintaan
+                edistävät: päätöksentekoelinten edustuksellisuus, koulutukset, toiminnasta myönnettävät
+                opintopisteet ja kokouspalkkiot, mahdollisuus korvata pakollista opetusta läsnäololla kokouksissa,
+                opiskelijoiden osallistumisen merkityksen korostaminen viestinnässä ja kielimuurien purkaminen
+                kv-opiskelijoiden osallistumisen mahdollistamiseksi.
+              </li>
+              <li class="list-item">
+                Opiskelijoiden aktiivisuutta ympäröivässä yhteiskunnassa tuetaan parhaiten kannustamalla siihen
+                aktiivisesti jo opintojen aikana, tunnistamalla ja sanoittamalla siitä syntyvä arvokas osaaminen
+                ja tunnustamalla se opintosuoritusten muodossa.
+              </li>
+            </ol>
+          </section>
+        <div>
+      </main>
+      <footer class="footer">
+        <a class="logo-link" href="https://hyy.helsinki.fi/fi">
+          <img class="logo" src="hyy_logo.png" />
+        </a>
+        <a class="logo-link" href="https://trey.fi/">
+          <img class="logo" src="trey_logo.svg" />
+        </a>
+        <a class="logo-link" href="https://www.isyy.fi/">
+          <img class="logo" src="isyy_logo.png" />
+        </a>
+        <a class="logo-link" href="https://ayy.fi/">
+          <img class="logo" src="ayy_logo.svg" />
+        </a>
+      </footer>
+    </section>
+    <img src="noppa.svg" class="die die1" />
+    <img src="noppa.svg" class="die die2" />
+    <img src="noppa.svg" class="die die3" />
+    <img src="noppa.svg" class="die die4" />
+  </body>
+</html>
