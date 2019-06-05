@@ -19,18 +19,13 @@ echo <<<EOT
 EOT;
 // Check whether client is allowed to trigger an update
 $allowed_ips = array(
-    "192.30.252.0",
-    "185.199.108.0",
-    "140.82.112.0"
+    "192.30.252.",
+    "185.199.108.",
+    "140.82.112.",
+    "140.82.115."
 );
 $allowed = false;
-$headers = apache_request_headers();
-if (@$headers["X-Forwarded-For"]) {
-    $ips = explode(",",$headers["X-Forwarded-For"]);
-    $ip  = $ips[0];
-} else {
-    $ip = $_SERVER['REMOTE_ADDR'];
-}
+$ip = $_SERVER['REMOTE_ADDR'];
 foreach ($allowed_ips as $allow) {
     if (stripos($ip, $allow) !== false) {
         $allowed = true;
